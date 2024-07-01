@@ -2,7 +2,7 @@
 
 ---
 
-# Samsung Internship Project
+# Samsung PRISM Project
 
 This repository contains the work done during my internship at Samsung. The project includes various research papers, code, and analysis related to the tasks assigned during the internship.
 
