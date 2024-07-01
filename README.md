@@ -1,4 +1,4 @@
-Certainly! Here's the revised README with a visual of the Samsung symbol:
+
 
 ---
 
