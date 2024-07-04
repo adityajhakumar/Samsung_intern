@@ -52,4 +52,4 @@
 **Conclusion:**
 "In summary, our college labs are well-equipped to support the hardware requirements for this project, from sensors to computational resources, memory and storage needs, and high-end cameras for video capture."
 
-This script and table provide a comprehensive overview of the hardware requirements, including detailed camera specifications for tracking human activity, without any `<br>` tags.
+
