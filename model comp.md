@@ -11,37 +11,39 @@
 | Human Action Recognition with Transformer Based on Convolutional Features      | Chengcheng Shi, Shuxin Liu              | 2024     | UCF-50, UCF-101                    | 84.5% (UCF-50), 86.7% (UCF-101)                     | Incorporate explicit temporal dynamics, optimize for real-world use                      |
 | Transformer-Based Approaches for Sensor-Based Human Activity Recognition       | Clayton Souza Leite et al.              | 2024     | WISDM, PAMAP2                      | 88.2% (PAMAP2), 85.4% (WISDM)                       | Adapt transformers for constrained environments, apply transfer learning                 |
 
-## Proposed Model Enhancements for Novelty
-
-1. **Fusion of Spatial-Temporal Features with Attention Mechanisms**: Combine CNNs for spatial features and lightweight transformers for temporal dynamics with cross-attention fusion.
-
-2. **Integration of Multi-Modal Data**: Leverage modalities such as RGB, optical flow, skeletal data, and depth with a multi-stream transformer model.
-
-3. **Self-Supervised Pre-Training**: Use masked video frame prediction, contrastive motion learning, or temporal alignment for pre-training.
-
-4. **Lightweight Design**: Develop transformers optimized for low-latency inference using MobileViT or Performer, and apply quantization/pruning.
-
-5. **Explainability**: Integrate attention visualization tools and interpretable modules for critical applications.
-
-6. **Robust Benchmarking**: Test across diverse datasets like NTU RGB+D, Kinetics-400, UCF-101, and HMDB-51 to establish performance.
-
-### Recommended Datasets for Validation
-1. **NTU RGB+D 120**: Multi-view skeleton-based action recognition.
-2. **Kinetics-400**: Large-scale video-based dataset.
-3. **UCF-101**: 101 categories of diverse actions.
-4. **EPIC-Kitchens**: Egocentric dataset for daily activities.
-5. **HMDB-51**: General-purpose action dataset.
-6. **PAMAP2**: Sensor-based activity recognition.
-
-### Performance Metrics
-- **Accuracy:** Top-1 and Top-5 accuracy.
-- **Latency:** Evaluate inference time.
-- **Model Complexity:** Parameter count and memory efficiency.
+To ensure the proposed model aligns with the goal of being a lightweight transformer, we can refine the **Proposed Model Enhancements** section and add specific considerations for lightweight design:
 
 ---
 
-**Next Steps:**
-1. Design the hybrid architecture incorporating the above improvements.
-2. Validate on recommended datasets and compare results.
-3. Document methodology and findings to establish novelty for publication.
+### Proposed Model Enhancements for Lightweight Design
+
+1. **Simplified Attention Mechanisms**  
+   - Replace standard attention with efficient variants like Linformer, Performer, or Nyströmformer to reduce computational complexity and memory usage.
+
+2. **Feature Compression Techniques**  
+   - Employ dimensionality reduction methods (e.g., PCA or Autoencoders) for spatial and temporal features before feeding them into the transformer layers.
+
+3. **Integration of Multi-Modal Data in Lightweight Streams**  
+   - Use separate lightweight encoders for each data modality (e.g., RGB, optical flow, skeleton data), with a shared transformer decoder to aggregate information efficiently.
+
+4. **Efficient Model Architectures**  
+   - Explore architectures like MobileViT or EfficientFormer, which are designed for low-resource environments while maintaining performance.
+
+5. **Self-Supervised Learning with Minimal Overhead**  
+   - Leverage pre-training tasks like masked video prediction with reduced feature dimensions to minimize training cost.
+
+6. **Quantization and Model Compression**  
+   - Apply techniques like post-training quantization, pruning, and knowledge distillation to ensure the model is deployable on edge devices.
+
+---
+
+### Key Datasets with Lightweight Considerations
+1. **NTU RGB+D 120**  
+   - Apply data sampling techniques to limit the data fed to the model while maintaining temporal context.
+2. **Kinetics-400 (Reduced Frames)**  
+   - Process reduced frame sequences to lower computational load.
+3. **PAMAP2 (Sensor Data)**  
+   - Ideal for low-latency models designed for real-time recognition.
+
+---
 
